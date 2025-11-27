@@ -1,0 +1,31 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="hello-world.js"></script>
+    <input class="input-a" type="text"/>
+    <input class="input-b" type="text"/>
+    <button onclick=addValues()>Press Me for Output!</button>
+    <div class="result"></div>
+    
+    <script>
+        function addValues() {
+            const a = document.querySelector(".input-a").value;
+            const b = document.querySelector(".input-b").value;
+        
+            const  result = Module.ccall(
+                "addNum",
+                "number",
+                ["number", "number"],
+                [a, b]
+            );
+            document.querySelector(".result").textContent = result;
+        }
+    </script>
+</body>
+</html>

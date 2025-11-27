@@ -1,0 +1,167 @@
+@import url(./../global.css);
+
+.bg-image {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -100;
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    background-color: var(--color-primary);
+    opacity: 90%;
+    z-index: 0;
+}
+
+.home-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.home-btn:hover {
+    filter: brightness(150%);
+}
+.home-icon {
+    height: 80px;
+    aspect-ratio: 1/1;
+}
+.home-btn p {
+    position: relative;
+    top: -10px;
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+    color: var(--color-secondary);
+}
+
+.prev-btn {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.prev-btn:hover {
+    filter: brightness(150%);
+}
+.prev-icon {
+    height: 60px;
+    aspect-ratio: 1/1;
+}
+.prev-btn p {
+    position: relative;
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+    color: var(--color-secondary);
+}
+
+.bg-cover {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 300px;
+    background-color: var(--color-primary);
+    z-index: 0;
+}
+.shadow {
+    position: fixed;
+    bottom: 10%;
+    left: calc(50% - 600px);
+    width: 1200px;
+    opacity: 60%;
+    animation: pulse 3s infinite;
+}
+
+.tutorial-levels {
+    width: 1000px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+    background-image: url(./../assets/puzzle-comp.png);
+    background-size: cover;
+    color: white;
+}
+.tutorial-levels header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: baseline;
+    margin-bottom: 32px;
+}
+.tutorial-levels .title {
+    font-size: 40px;
+    font-weight: var(--fw-bold);
+}
+.tutorial-levels .subtitle {
+    font-size: 20px;
+    color: var(--color-dark);
+}
+.tutorial-levels .body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 335px auto;
+}
+.tutorial-levels .desc{
+    padding-inline: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    text-align: center;
+}
+.tutorial-levels .levels {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; 
+    margin-block: 32px 64px;
+    margin-inline-start: 50px;
+}
+.tutorial-levels .level-btn {
+    width: 80px;
+    margin: 8px 16px;
+    aspect-ratio: 1/1;
+    font-size: 20px;
+    color: white;
+    background-color: var(--color-dark);
+    border-width: 4px;  
+}
+.tutorial-levels .to-tutorial-btn {
+    width: 70%;
+    margin-inline: auto;
+    padding: 8px 16px;
+    background-color: var(--color-dark);
+    color: var(--color-white); 
+}
+.tutorial-levels button:hover {
+    filter: brightness(120%)
+}
+
+.tutorial-levels button:disabled {
+    opacity: 80%;
+}
+
+.tutorial-levels button:disabled:hover {
+    filter: brightness(100%)
+}

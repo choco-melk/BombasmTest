@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Puzzle Levels</title>
+    <script src="./../src/get-puzzle-levels/script.js"></script>
+    <script src="./../src/bitstring-operations/game_logic.js"></script>
+</head>
+<body >
+    <img class="bg-image" src="./../assets/bg-image.jpg">
+    <div class="bg-cover">     
+    </div>
+    <img class="shadow" src="./../assets/shadow.png">
+    <div class="overlay"></div>
+    <div class="modal-overlay overlay hidden"></div>
+
+    <figure class="to-menu-btn">
+        <img class="to-menu-icon" src="./../assets/prev.png">
+        <p>BACK TO MENU</p>
+    </figure>
+    
+    <main class="puzzle">
+        <section class="puzzle-comp">
+            <div class="current-bitstring-screen-container">
+                <p class="label">Bitstring </p>
+                <div class="current-bitstring-screen"></div>
+            </div>
+
+            <div class="operation-count-section">
+                <span class="screen"></span>Operations Left
+            </div>
+
+            <div class="operation-buttons">
+                <div class="main-buttons"></div>
+                <div class="misc-buttons">
+                    <button class="reset-btn misc-btn">
+                        <img class="reset-icon" src="./../assets/reset.png">
+                    </button>
+                </div>
+            </div>                
+        
+        </section>  
+        <section class="puzzle-desc">
+            <header>
+                <h1 class="title">Title</h1>
+                <p class="subtitle">Subtitle</p>
+            </header>  
+            <section class="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nulla interdum lobortis dictum. Vestibulum aliquam arcu a dui porttitor, eget consequat augue pulvinar. Quisque vel tincidunt urna. Etiam id felis non lacus efficitur tincidunt.
+            </section>
+            <div class="target-section">
+                <p class="label">Known Ransom Key</p>
+                <div class="bitstring"></div>
+            </div>        
+        </section>
+    </main>
+               
+    <section class="gameover-modal modal hidden">
+        <header>
+            <h1 class="title">GAME OVER</h1>
+            <p class="subtitle">Your luck has run out!</p>
+        </header>
+        <section class="body">
+            <div class="btn-container">
+                <button class="reset-btn">Try Again</button>
+                <button class="to-puzzle-btn">Back to Puzzles</button>                
+            </div>
+        </section>
+    </section>
+
+    <section class="victory-modal modal hidden">
+        <header>
+            <h1 class="title">Victory</h1>
+            <p class="subtitle">Phew. You're still good boss.</p>
+        </header>
+        <section class="body">
+            <p class="desc">Would you like to retry?</p>
+            <div class="btn-container">
+                <button class="reset-btn">Try Again</button>
+                <button class="next-puzzle-btn">Next Puzzle</button>
+                <button class="to-puzzle-btn">Back to Puzzles</button>                
+            </div>
+        </section>
+    </section> 
+    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bombasm</title>
+    <script src="game_logic.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <input id = "a" placeholder="int">
+    <input id = "b" placeholder="another int">
+    <input id = "c" placeholder="bits in bitfield">
+    <input id = "operator" placeholder="operation">
+    <button onclick="func()">click result</button>
+    <div id="result"></div>
+    <script>
+        const a = document.getElementById("a");
+        const b = document.getElementById("b");
+        const c = document.getElementById("c");
+        const operator = document.getElementById("operator");
+        const Result = document.getElementById("result");
+        function func() {
+            var result = Module.ccall(
+                "bitStringOperations", // function name
+                "string", // return type
+                ["string", "string", "string", "number"], // argument types
+                [a.value, b.value, operator.value, c.value] // arguments
+            );
+            Result.innerHTML = "result is " + result;
+        }
+    </script>
+</body>
+</html>
