@@ -25,6 +25,8 @@ TutorialLevelsModule().then((Module) => {
     const getLevelCount = Module.cwrap("getTutorialLevelCount", "number", []);
     const getLevelDesc = Module.cwrap("getTutorialLevelDescription", "string", ["number"])
     const getLevelOperator = Module.cwrap("getTutorialLevelOperator", "string", ["number"]);
+    const getLeveTitle = Module.cwrap("getTutorialLevelTitle", "string", ["number"]);
+
     for (let i = 0; i < getLevelCount(); i++) {
         const button = document.createElement("button");
         button.className = "level-btn";
@@ -33,7 +35,7 @@ TutorialLevelsModule().then((Module) => {
             window.location.href= `../tutorial/index.html?level=${i}`;
         });
         button.addEventListener("mouseover", async () => {
-            await addTypeWriterEffect(".desc", getLevelDesc(i))
+            await addTypeWriterEffect(".desc", getLeveTitle(i))
         })
         tutorialLevelDisplay.appendChild(button);
     }
