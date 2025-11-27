@@ -1,5 +1,5 @@
 document.querySelector(".to-menu-btn").addEventListener("click", () => {
-    window.location.href = "/../puzzle-levels/";
+    window.location.href = "../puzzle-levels/index.html";
 })
 
 PuzzleLevelsModule().then((Module) => {
@@ -46,7 +46,7 @@ PuzzleLevelsModule().then((Module) => {
     }
 
     if (!puzzleUnlockedLevels.includes(puzzleIndex + 1)) {
-        window.location.href = "./../puzzle-levels/"
+        window.location.href = "../puzzle-levels/index.html"
     } else {
         document.querySelector("main").classList.remove("hidden");
     }
@@ -101,13 +101,13 @@ PuzzleLevelsModule().then((Module) => {
     const toPuzzlePage = document.querySelectorAll(".to-puzzle-btn");
     toPuzzlePage.forEach(btn => {
         btn.addEventListener("click", () => {
-            window.location.href = "./../puzzle-levels/"
+            window.location.href = "../puzzle-levels/index.html"
         });
     })
 
     const nextPuzzleBtn = document.querySelector(".next-puzzle-btn");
     nextPuzzleBtn.addEventListener("click", () => {
-        window.location.href = `./../puzzle/?level=${puzzleIndex + 1}`;
+        window.location.href = `../puzzle/index.html?level=${puzzleIndex + 1}`;
     });
 });
 

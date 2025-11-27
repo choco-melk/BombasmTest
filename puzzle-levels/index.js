@@ -4,11 +4,11 @@ addTypeWriterEffect(".desc", "Welcome to the Puzzle Levels :)")
 
 document.querySelector(".home-btn").addEventListener("click", e => {
     e.preventDefault();
-    window.location.href = "./../"
+    window.location.href = "../index.html"
 })
 document.querySelector(".next-btn").addEventListener("click", e => {
     e.preventDefault();
-    window.location.href = "./../tutorial-levels/"
+    window.location.href = "../tutorial-levels/index.html"
 })
 
 
@@ -23,7 +23,7 @@ PuzzleLevelsModule().then((Module) => {
         button.className = "level-btn";
         button.textContent = getLevelNumber(i);
         button.addEventListener("click", () => {
-            window.location.href= `./../puzzle/?level=${i}`;
+            window.location.href= `../puzzle/index.html?level=${i}`;
         });
         puzzleLevelDisplay.appendChild(button);
     }

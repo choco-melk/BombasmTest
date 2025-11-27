@@ -1,5 +1,5 @@
 document.querySelector(".to-menu-btn").addEventListener("click", () => {
-    window.location.href = "./../tutorial-levels/"
+    window.location.href = "../tutorial-levels/index.html"
 })
 
 TutorialLevelsModule().then((Module) => {

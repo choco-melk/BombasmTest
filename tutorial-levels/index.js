@@ -6,17 +6,17 @@ import addTypeWriterEffect from './../global.js'
 
 document.querySelector(".home-btn").addEventListener("click", e => {
     e.preventDefault();
-    window.location.href = "./../"
+    window.location.href = "../index.html"
 })
 document.querySelector(".prev-btn").addEventListener("click", e => {
     e.preventDefault();
-    window.location.href = "./../puzzle-levels/"
+    window.location.href = "../puzzle-levels/index.html"
 })
 
 document.querySelectorAll(".level-btn").forEach(element => {
     element.addEventListener("click", e => {
         e.preventDefault();
-        window.location.href = "./../tutorial/"
+            window.location.href = "../tutorial/index.html"
     });
 });
 
@@ -30,7 +30,7 @@ TutorialLevelsModule().then((Module) => {
         button.className = "level-btn";
         button.textContent = getLevelOperator(i);
         button.addEventListener("click", () => {
-            window.location.href= `./../tutorial/?level=${i}`;
+            window.location.href= `../tutorial/index.html?level=${i}`;
         });
         button.addEventListener("mouseover", async () => {
             await addTypeWriterEffect(".desc", getLevelDesc(i))
